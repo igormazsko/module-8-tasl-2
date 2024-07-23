@@ -5,7 +5,14 @@ int main()
   int chatl;
   int gravitsapa = 2200;
   int cc = 4400;
-  std::cout << "Введите сумму Ваших чатлов\n";
-  std::cin >> chatl;
+  while (chatl <= 0)
+    {
+      std::cout << "Введите сумму Ваших чатлов: \n";
+      std::cin >> chatl;
+      if (chatl <= 0)
+      {
+        std::cout << "Сумма должна быть больше нуля! ";
+      }
+    }
   std::cout << "За Ваши чатлы Вы можете получить " << (float)chatl / (float)gravitsapa << " гравицап, или " << (float)chatl / (float)cc << "КЦ \n";
 }
